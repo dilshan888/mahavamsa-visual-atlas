@@ -1,0 +1,115 @@
+import { Journey } from '../types/chronicle';
+
+export const JOURNEYS: Journey[] = [
+  {
+    id: 'buddha-visits',
+    title: 'The Three Sacred Visits of the Buddha',
+    subtitle: 'Consecration of Laṅkā (Ch. 1)',
+    chapterRange: [1, 1],
+    yearLabel: 'c. 588–580 BCE',
+    eraId: 'sacred-foundations',
+    color: '#d99b26',
+    category: 'religion',
+    summary:
+      'In three aerial visits from northern India, the Buddha tamed the Yakkhas at Mahiyangaṇa, reconciled the Nāga kings at Nāgadīpa, and blessed Kalyāṇī, Sumanakūṭa, Dīghavāpi, and Anurādhapura.',
+    stops: [
+      { placeId: 'bodh-gaya', label: 'Uruvelā (Bodh Gaya)', note: 'Departure in the 9th month after Enlightenment', chapter: 1 },
+      { placeId: 'mahiyangana', label: 'Mahiyangaṇa', note: '1st Visit: Tamed the Yakkhas; gifted hair relics to Sumana Saman', chapter: 1 },
+      { placeId: 'nagadipa', label: 'Nāgadīpa', note: '2nd Visit: Resolved war between Nāga kings Cūḷodara and Mahodara', chapter: 1 },
+      { placeId: 'kelaniya', label: 'Kalyāṇī (Kelaniya)', note: '3rd Visit: Preached at King Maṇiakkhika’s gem pavilion', chapter: 1 },
+      { placeId: 'sumanakuta', label: 'Sumanakūṭa (Sri Pada)', note: 'Left the sacred footprint on the mountain summit', chapter: 1 },
+      { placeId: 'dighavapi', label: 'Dīghavāpi', note: 'Entered meditation at the eastern sanctuary', chapter: 1 },
+      { placeId: 'anuradhapura', label: 'Mahāmeghavana (Anurādhapura)', note: 'Consecrated the future sites of the Bodhi Tree and Great Stūpa', chapter: 1 },
+    ],
+  },
+  {
+    id: 'vijaya-voyage',
+    title: 'Prince Vijaya’s Exile & Landing',
+    subtitle: 'From Sīhapura to Tambapaṇṇi (Ch. 6–7)',
+    chapterRange: [6, 7],
+    yearLabel: '543 BCE',
+    eraId: 'vijayan-colonization',
+    color: '#b8422a',
+    category: 'politics',
+    summary:
+      'Banished by King Sīhabāhu for lawlessness, Prince Vijaya and 700 companions sailed south from Lāḷa, landing on the copper-hued sands of Tambapaṇṇi before founding settlements inland.',
+    stops: [
+      { placeId: 'sinhapura', label: 'Sīhapura (Lāḷa)', note: 'Vijaya and 700 followers placed aboard ships by King Sīhabāhu', chapter: 6 },
+      { placeId: 'tambapanni', label: 'Tambapaṇṇi', note: 'Landed on the day of the Buddha’s Parinibbāna; met Kuveṇī', chapter: 6 },
+      { placeId: 'upatissagama', label: 'Upatissagāma', note: 'Inland settlement founded by minister Upatissa', chapter: 7 },
+      { placeId: 'madura', label: 'Madhurā (Pandyan Kingdom)', note: 'Envoys sent to fetch a Pandyan princess and artisan guilds', chapter: 7 },
+    ],
+  },
+  {
+    id: 'mahinda-mission',
+    title: 'Arhat Mahinda’s Dhamma Mission',
+    subtitle: 'From Pāṭaliputta & Vedisa to Mihintale (Ch. 12–14)',
+    chapterRange: [12, 14],
+    yearLabel: '247 BCE',
+    eraId: 'arrival-of-buddhism',
+    color: '#1b7f68',
+    category: 'religion',
+    summary:
+      'Following the Third Buddhist Council, Emperor Asoka’s son Arhat Mahinda visited his mother at Vedisa before arriving on the Poson full moon at Missaka-pabbata (Mihintale).',
+    stops: [
+      { placeId: 'pataliputta', label: 'Pāṭaliputta', note: 'Commissioned after the Third Council by Elder Moggaliputta-Tissa', chapter: 12 },
+      { placeId: 'vedisa', label: 'Vedisagiri (Sanchi)', note: 'Farewell to mother Devī; departed with four monks and novice Sumana', chapter: 13 },
+      { placeId: 'mihintale', label: 'Missaka-pabbata (Mihintale)', note: 'Encountered King Devānampiyatissa and preached the Cūḷahatthipadopama Sutta', chapter: 13 },
+      { placeId: 'anuradhapura', label: 'Anurādhapura (Mahāmeghavana)', note: 'Entered the capital and received the Mahāvihāra', chapter: 14 },
+    ],
+  },
+  {
+    id: 'bodhi-voyage',
+    title: 'Voyage of the Sacred Jaya Śrī Mahā Bodhi',
+    subtitle: 'Therī Saṅghamittā’s Maritime Procession (Ch. 18–19)',
+    chapterRange: [18, 19],
+    yearLabel: 'c. 246 BCE',
+    eraId: 'arrival-of-buddhism',
+    color: '#2e8b57',
+    category: 'diplomacy',
+    summary:
+      'Emperor Asoka escorted the southern branch of the Bodhi Tree from Bodh Gaya to Tāmalitti, where Therī Saṅghamittā sailed it across the Bay of Bengal to Jambukola and south to Anurādhapura.',
+    stops: [
+      { placeId: 'bodh-gaya', label: 'Mahābodhi (Bodh Gaya)', note: 'Southern branch miraculously detached into a golden vase', chapter: 18 },
+      { placeId: 'pataliputta', label: 'Pāṭaliputta', note: 'Honored in imperial festival before heading down the Ganges', chapter: 18 },
+      { placeId: 'tamralipti', label: 'Tāmalitti Port', note: 'Asoka waded neck-deep into the sea to bid farewell', chapter: 19 },
+      { placeId: 'jambukola', label: 'Jambukolapaṭṭana', note: 'Devānampiyatissa waded into the waves to receive the sapling', chapter: 19 },
+      { placeId: 'anuradhapura', label: 'Mahāmeghavana, Anurādhapura', note: 'Planted amid all nobles of Laṅkā including Kājaragāma', chapter: 19 },
+    ],
+  },
+  {
+    id: 'dutugamunu-campaign',
+    title: 'King Duṭṭhagāmaṇi’s Unification Campaign',
+    subtitle: 'From Ruhuna through Vijitanagara to Anurādhapura (Ch. 24–25)',
+    chapterRange: [24, 25],
+    yearLabel: 'c. 164–161 BCE',
+    eraId: 'dutugamunu-epic',
+    color: '#9b2c4e',
+    category: 'war',
+    summary:
+      'Marching north from Mahāgāma with Queen Vihāramahādevī, his Ten Giant Warriors, and war elephant Kaṇḍula, Duṭṭhagāmaṇi captured 32 fortresses before meeting King Elāra in single combat.',
+    stops: [
+      { placeId: 'magama', label: 'Mahāgāma (Ruhuna)', note: 'Mustered the royal army and Ten Giant Warriors', chapter: 25 },
+      { placeId: 'mahiyangana', label: 'Mahiyangaṇa', note: 'Captured the first northern outpost along the Mahaweli', chapter: 25 },
+      { placeId: 'vijitapura', label: 'Vijitanagara', note: 'Four-month siege; Kaṇḍula & Nandimitta breached the iron gates', chapter: 25 },
+      { placeId: 'anuradhapura', label: 'Anurādhapura South Gate', note: 'Single combat with King Elāra; unification of Laṅkā', chapter: 25 },
+    ],
+  },
+  {
+    id: 'vattagamani-canon',
+    title: 'Vaṭṭagāmaṇi’s Exile & the Written Tipiṭaka',
+    subtitle: 'Survival, Restoration & Ālokavihāra (Ch. 33)',
+    chapterRange: [33, 33],
+    yearLabel: '103–29 BCE',
+    eraId: 'middle-anuradhapura',
+    color: '#52606d',
+    category: 'religion',
+    summary:
+      'Driven from Anurādhapura for 14 years by five Tamil chieftains and famine, King Vaṭṭagāmaṇi rallied forces in the highlands, built Abhayagiri, and protected the Sangha who wrote the Tipiṭaka at Ālokavihāra.',
+    stops: [
+      { placeId: 'anuradhapura', label: 'Anurādhapura', note: 'Fled after defeat at Kolambālaka; later returned to build Abhayagiri', chapter: 33 },
+      { placeId: 'kotmale', label: 'Malaya Highlands', note: 'Fourteen years in hiding sheltered by Elder Mahātissa', chapter: 33 },
+      { placeId: 'aluvihare', label: 'Ālokavihāra (Matale)', note: '500 elders inscribed the complete Pāli Tipiṭaka onto palm leaves', chapter: 33 },
+    ],
+  },
+];

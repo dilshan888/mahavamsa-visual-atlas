@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mahavamsa-atlas.local/schema/chronicle.schema.json",
+  "title": "Mahavamsa & Culavamsa Chronicle Dataset Schema",
+  "description": "Structured schema for mapping chapters, places, historical figures, dynastic relations, monuments, and journeys across the Mahāvaṃsa (Ch. 1–37) and Cūḷavaṃsa (Ch. 38–100).",
+  "type": "object",
+  "required": ["meta", "eras", "places", "characters", "relations", "monuments", "journeys", "chapters"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "subtitle", "sourceTranslation", "totalChaptersLoaded", "booksIncluded", "schemaVersion"],
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "sourceTranslation": { "type": "string" },
+        "totalChaptersLoaded": { "type": "integer", "minimum": 1 },
+        "booksIncluded": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["mahavamsa", "culavamsa"] }
+        },
+        "schemaVersion": { "type": "string" }
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "number",
+          "chronicle",
+          "title",
+          "paliTitle",
+          "eraId",
+          "yearStart",
+          "yearEnd",
+          "yearLabel",
+          "verseCount",
+          "themes",
+          "summary",
+          "narrativeArc",
+          "primaryPlaceId",
+          "placeIds",
+          "characterIds",
+          "monumentIds",
+          "journeyIds",
+          "events"
+        ],
+        "properties": {
+          "number": { "type": "integer", "minimum": 1 },
+          "chronicle": { "type": "string", "enum": ["mahavamsa", "culavamsa"] },
+          "title": { "type": "string" },
+          "paliTitle": { "type": "string" },
+          "eraId": { "type": "string" },
+          "yearStart": { "type": "integer" },
+          "yearEnd": { "type": "integer" },
+          "yearLabel": { "type": "string" },
+          "verseCount": { "type": "integer" },
+          "themes": { "type": "array", "items": { "type": "string" } },
+          "summary": { "type": "string" },
+          "narrativeArc": { "type": "string" },
+          "keyQuote": { "type": "string" },
+          "primaryPlaceId": { "type": "string" },
+          "placeIds": { "type": "array", "items": { "type": "string" } },
+          "characterIds": { "type": "array", "items": { "type": "string" } },
+          "monumentIds": { "type": "array", "items": { "type": "string" } },
+          "journeyIds": { "type": "array", "items": { "type": "string" } },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "title", "yearLabel", "yearNumeric", "category", "summary"]
+            }
+          }
+        }
+      }
+    }
+  }
+}

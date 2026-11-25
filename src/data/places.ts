@@ -1,0 +1,347 @@
+import { Place } from '../types/chronicle';
+
+export const PLACES: Place[] = [
+  // --- SRI LANKA ---
+  {
+    id: 'anuradhapura',
+    ancientName: 'Anurādhapura',
+    modernName: 'Anuradhapura',
+    region: 'sri-lanka',
+    type: 'capital',
+    coords: [8.3114, 80.4037],
+    summary:
+      'The preeminent sacred capital of ancient Sri Lanka for over a millennium, planned by King Paṇḍukābhaya and adorned with the Mahāvihāra, Sri Maha Bodhi, Ruwanwelisaya, Abhayagiri, and Jetavanārāmaya.',
+    chapters: [7, 8, 9, 10, 11, 14, 15, 17, 19, 20, 21, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37],
+  },
+  {
+    id: 'mihintale',
+    ancientName: 'Missaka-pabbata / Cetiyapabbata',
+    modernName: 'Mihintale',
+    region: 'sri-lanka',
+    type: 'sacred-site',
+    coords: [8.3506, 80.5103],
+    summary:
+      'The cradle of Sri Lankan Buddhism where Arhat Mahinda met King Devānampiyatissa during a royal deer hunt in 247 BCE, later housing 68 rock-cut monastery caves.',
+    chapters: [13, 14, 16, 17, 20, 34],
+  },
+  {
+    id: 'mahiyangana',
+    ancientName: 'Mahiyangaṇa',
+    modernName: 'Mahiyangana',
+    region: 'sri-lanka',
+    type: 'sacred-site',
+    coords: [7.3315, 80.9912],
+    summary:
+      'Site of the Buddha’s first visit to Laṅkā (nine months after Enlightenment), where he tamed the Yakkhas and gifted a lock of hair enshrined in the Mahiyangaṇa Stūpa; later the first fortress taken by Duṭṭhagāmaṇi.',
+    chapters: [1, 25],
+  },
+  {
+    id: 'nagadipa',
+    ancientName: 'Nāgadīpa',
+    modernName: 'Nainativu (Jaffna Peninsula)',
+    region: 'sri-lanka',
+    type: 'sacred-site',
+    coords: [9.6075, 79.7728],
+    summary:
+      'Northern island where the Buddha made his second visit in the fifth year after Enlightenment to settle a dispute between the Nāga kings Cūḷodara and Mahodara over a gem-set throne.',
+    chapters: [1, 20, 35],
+  },
+  {
+    id: 'kelaniya',
+    ancientName: 'Kalyāṇī',
+    modernName: 'Kelaniya',
+    region: 'sri-lanka',
+    type: 'sacred-site',
+    coords: [6.9522, 79.9184],
+    summary:
+      'Ancient western kingdom invited by Nāga King Maṇiakkhika for the Buddha’s third visit; later ruled by King Kalyāṇī-Tissa, father of Queen Vihāramahādevī.',
+    chapters: [1, 22],
+  },
+  {
+    id: 'sumanakuta',
+    ancientName: 'Sumanakūṭa',
+    modernName: 'Sri Pada (Adam’s Peak)',
+    region: 'sri-lanka',
+    type: 'sacred-site',
+    coords: [6.8096, 80.4994],
+    summary:
+      'Sacred mountain peak where the Buddha left his footprint on his third visit to Laṅkā at the invitation of the guardian deity Sumana Saman.',
+    chapters: [1],
+  },
+  {
+    id: 'dighavapi',
+    ancientName: 'Dīghavāpi',
+    modernName: 'Deegavapi (Ampara)',
+    region: 'sri-lanka',
+    type: 'sacred-site',
+    coords: [7.2775, 81.7798],
+    summary:
+      'Eastern sacred sanctuary blessed by the Buddha on his third visit; later developed into an agricultural breadbasket and monastic center by Prince Saddhātissa.',
+    chapters: [1, 24, 33],
+  },
+  {
+    id: 'tambapanni',
+    ancientName: 'Tambapaṇṇi',
+    modernName: 'Kudiramalai / Mannar Coast',
+    region: 'sri-lanka',
+    type: 'port',
+    coords: [8.5472, 79.8744],
+    summary:
+      'Copper-colored shore on the northwestern coast where Prince Vijaya and his 700 followers landed on the day of the Buddha’s Parinibbāna (543 BCE) and founded the first settlement.',
+    chapters: [6, 7],
+  },
+  {
+    id: 'upatissagama',
+    ancientName: 'Upatissagāma',
+    modernName: 'North of Anuradhapura (Malwathu Oya)',
+    region: 'sri-lanka',
+    type: 'capital',
+    coords: [8.42, 80.36],
+    summary:
+      'Settlement founded by Vijaya’s minister Upatissa on the Gambhīra river; served as the royal capital under Paṇḍuvāsudeva and Abhaya before Paṇḍukābhaya moved it to Anurādhapura.',
+    chapters: [7, 8, 9],
+  },
+  {
+    id: 'vijitapura',
+    ancientName: 'Vijitanagara',
+    modernName: 'Vijithapura (near Kala Wewa)',
+    region: 'sri-lanka',
+    type: 'battlefield',
+    coords: [8.0085, 80.5625],
+    summary:
+      'Heavily fortified city founded by Vijaya’s minister Vijita; site of the decisive four-month siege where Duṭṭhagāmaṇi’s war elephant Kaṇḍula and Nandimitta breached the iron gates.',
+    chapters: [7, 25],
+  },
+  {
+    id: 'ritigala',
+    ancientName: 'Ariṭṭhapabbata',
+    modernName: 'Ritigala',
+    region: 'sri-lanka',
+    type: 'battlefield',
+    coords: [8.1119, 80.6611],
+    summary:
+      'Forested mountain stronghold where Prince Paṇḍukābhaya camped for seven years preparing his decisive campaign against his uncles.',
+    chapters: [10, 21],
+  },
+  {
+    id: 'jambukola',
+    ancientName: 'Jambukolapaṭṭana',
+    modernName: 'Sambilturai (Jaffna)',
+    region: 'sri-lanka',
+    type: 'port',
+    coords: [9.7963, 79.9636],
+    summary:
+      'Principal ancient northern port from which Devānampiyatissa’s envoys sailed to Pāṭaliputta and where Therī Saṅghamittā landed with the sacred Jaya Sri Maha Bodhi sapling.',
+    chapters: [11, 18, 19],
+  },
+  {
+    id: 'magama',
+    ancientName: 'Mahāgāma',
+    modernName: 'Tissamaharama (Ruhuna)',
+    region: 'sri-lanka',
+    type: 'capital',
+    coords: [6.2836, 81.2877],
+    summary:
+      'Southern capital of the Kingdom of Ruhuna founded by Prince Mahānāga; seat of King Kākavaṇṇatissa and Queen Vihāramahādevī, and launching point of Duṭṭhagāmaṇi’s northward march.',
+    chapters: [22, 23, 24, 25, 33, 35],
+  },
+  {
+    id: 'kirinda',
+    ancientName: 'Tolaka / Kirinda',
+    modernName: 'Kirinda',
+    region: 'sri-lanka',
+    type: 'port',
+    coords: [6.2153, 81.3372],
+    summary:
+      'Southern shore where Princess Devī (later Queen Vihāramahādevī) washed ashore safely in her golden vessel after offering herself to calm the raging sea.',
+    chapters: [22],
+  },
+  {
+    id: 'kataragama',
+    ancientName: 'Kājaragāma',
+    modernName: 'Kataragama',
+    region: 'sri-lanka',
+    type: 'sacred-site',
+    coords: [6.4135, 81.3326],
+    summary:
+      'Ancient Kshatriya settlement in Ruhuna whose nobles attended the planting of the sacred Bodhi tree in Anurādhapura and received one of the first eight saplings.',
+    chapters: [19, 22],
+  },
+  {
+    id: 'kotmale',
+    ancientName: 'Kotthumala / Malaya',
+    modernName: 'Kotmale (Central Highlands)',
+    region: 'sri-lanka',
+    type: 'settlement',
+    coords: [7.064, 80.606],
+    summary:
+      'Mountain refuge in the Malaya highlands where young Prince Gāmaṇi fled in defiance of his father Kākavaṇṇatissa, earning the epithet "Duṭṭhagāmaṇi".',
+    chapters: [24],
+  },
+  {
+    id: 'mahatittha',
+    ancientName: 'Mahātittha',
+    modernName: 'Mantai (Mannar)',
+    region: 'sri-lanka',
+    type: 'port',
+    coords: [8.9606, 79.9614],
+    summary:
+      'Major northwestern emporium linking Laṅkā with South India; landing site of Pandyan brides, Chola armies, and trade vessels across the chronicle.',
+    chapters: [7, 25, 33, 35],
+  },
+  {
+    id: 'aluvihare',
+    ancientName: 'Ālokavihāra',
+    modernName: 'Aluvihare (Matale)',
+    region: 'sri-lanka',
+    type: 'monastery',
+    coords: [7.4969, 80.6217],
+    summary:
+      'Rock-cave monastery in Matale where 500 elders convened under King Vaṭṭagāmaṇi Abhaya (c. 29 BCE) to commit the oral Pāli Tipiṭaka to palm-leaf manuscripts for the first time.',
+    chapters: [33],
+  },
+  {
+    id: 'attanagalla',
+    ancientName: 'Hatthavanagalla',
+    modernName: 'Attanagalla',
+    region: 'sri-lanka',
+    type: 'monastery',
+    coords: [7.1167, 80.1167],
+    summary:
+      'Forest hermitage where the saintly King Sirisaṅghabodhi retired after relinquishing his throne to prevent bloodshed and offered his own head to a poor traveler.',
+    chapters: [36],
+  },
+  {
+    id: 'minneriya',
+    ancientName: 'Maṇihīra-vāpi',
+    modernName: 'Minneriya Tank',
+    region: 'sri-lanka',
+    type: 'reservoir',
+    coords: [8.0372, 80.8794],
+    summary:
+      'Vast ancient irrigation reservoir (4,670 acres) built by King Mahāsena, earning him posthumous veneration as "Minneri Deviyo" (the God of Minneriya).',
+    chapters: [37],
+  },
+  {
+    id: 'gokanna',
+    ancientName: 'Gokaṇṇa',
+    modernName: 'Trincomalee',
+    region: 'sri-lanka',
+    type: 'port',
+    coords: [8.5874, 81.2152],
+    summary:
+      'Natural deep-water harbor on the eastern coast where Prince Paṇḍuvāsudeva and Princess Bhaddakaccānā landed from India, and where King Mahāsena later built a vihāra.',
+    chapters: [8, 37],
+  },
+  // --- INDIA & SUBCONTINENT ---
+  {
+    id: 'bodh-gaya',
+    ancientName: 'Uruvelā / Mahābodhi',
+    modernName: 'Bodh Gaya, Bihar',
+    region: 'india',
+    type: 'sacred-site',
+    coords: [24.6959, 84.9914],
+    summary:
+      'Site of the Buddha’s Enlightenment under the Bodhi Tree; from its southern branch Emperor Asoka took the sapling carried to Laṅkā by Therī Saṅghamittā.',
+    chapters: [1, 18, 19],
+  },
+  {
+    id: 'rajagaha',
+    ancientName: 'Rājagaha',
+    modernName: 'Rajgir, Bihar',
+    region: 'india',
+    type: 'capital',
+    coords: [25.028, 85.4214],
+    summary:
+      'Ancient Magadhan capital where the First Buddhist Council was convened at the Sattapaṇṇi Cave under Elder Mahākassapa and King Ajātasattu.',
+    chapters: [2, 3],
+  },
+  {
+    id: 'vesali',
+    ancientName: 'Vesālī',
+    modernName: 'Vaishali, Bihar',
+    region: 'india',
+    type: 'capital',
+    coords: [25.99, 85.13],
+    summary:
+      'Licchavi capital where the Second Buddhist Council was held a century after the Parinibbāna to resolve the Ten Points of monastic discipline.',
+    chapters: [4],
+  },
+  {
+    id: 'pataliputta',
+    ancientName: 'Pāṭaliputta',
+    modernName: 'Patna, Bihar',
+    region: 'india',
+    type: 'capital',
+    coords: [25.5941, 85.1376],
+    summary:
+      'Imperial Mauryan capital of Emperor Asoka, site of the Third Buddhist Council at Asokārāma and departure point for Buddhist missions across Asia.',
+    chapters: [5, 11, 12, 18, 19],
+  },
+  {
+    id: 'vedisa',
+    ancientName: 'Vedisagiri',
+    modernName: 'Vidisha / Sanchi, Madhya Pradesh',
+    region: 'india',
+    type: 'monastery',
+    coords: [23.5251, 77.8081],
+    summary:
+      'Monastic hill and hometown of Mahinda’s mother Devī, from which Arhat Mahinda and his companions departed for Laṅkā.',
+    chapters: [13],
+  },
+  {
+    id: 'tamralipti',
+    ancientName: 'Tāmalitti',
+    modernName: 'Tamluk, West Bengal',
+    region: 'india',
+    type: 'port',
+    coords: [22.2974, 87.9219],
+    summary:
+      'Great Ganges delta port where Emperor Asoka bade farewell to the sacred Bodhi sapling as Therī Saṅghamittā set sail for Jambukola.',
+    chapters: [11, 18, 19],
+  },
+  {
+    id: 'sinhapura',
+    ancientName: 'Sīhapura (Lāḷa)',
+    modernName: 'Lāḷa / Eastern-Western India',
+    region: 'india',
+    type: 'kingdom',
+    coords: [22.7, 87.3],
+    summary:
+      'Capital founded by King Sīhabāhu in the land of Lāḷa, from which his unruly son Prince Vijaya and 700 companions were exiled by ship.',
+    chapters: [6],
+  },
+  {
+    id: 'madura',
+    ancientName: 'Madhurā (Paṇḍu)',
+    modernName: 'Madurai, Tamil Nadu',
+    region: 'india',
+    type: 'kingdom',
+    coords: [9.9252, 78.1198],
+    summary:
+      'Ancient Pandyan capital from which a royal princess and families of artisans were sent to wed King Vijaya and establish courtly governance in Laṅkā.',
+    chapters: [7],
+  },
+  {
+    id: 'chola-country',
+    ancientName: 'Coḷa-raṭṭha',
+    modernName: 'Thanjavur / Kaveri Delta, Tamil Nadu',
+    region: 'india',
+    type: 'kingdom',
+    coords: [10.787, 79.1378],
+    summary:
+      'Homeland of the Chola noble Elāra who ruled Anurādhapura justly for 44 years, and later target of King Gajabāhu I’s legendary expedition.',
+    chapters: [21, 35],
+  },
+  {
+    id: 'kapilavatthu',
+    ancientName: 'Kapilavatthu',
+    modernName: 'Kapilavastu (Nepal/India border)',
+    region: 'india',
+    type: 'kingdom',
+    coords: [27.573, 83.052],
+    summary:
+      'Ancestral Sakyan homeland of the Buddha and of Princess Bhaddakaccānā, whose brothers settled across Laṅkā under King Paṇḍuvāsudeva.',
+    chapters: [2, 8],
+  },
+];
