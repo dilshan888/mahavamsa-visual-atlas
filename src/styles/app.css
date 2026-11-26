@@ -63,6 +63,33 @@ body,
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+:root {
+  --target-size: 24px;
+}
+
+@media (pointer: coarse) {
+  :root {
+    --target-size: 44px;
+  }
+
+  :where(button, select, input:not([type='checkbox'], [type='radio'], [type='range'])) {
+    min-block-size: var(--target-size);
+    min-inline-size: var(--target-size);
+  }
 }
 
 button,
@@ -1637,22 +1664,225 @@ select {
 }
 
 @media (max-width: 980px) {
-  .geo-layout,
-  .graph-body,
+  html,
+  body,
+  #root {
+    height: auto;
+    min-height: 100dvh;
+  }
+
+  .app-shell {
+    height: auto;
+    min-height: 100dvh;
+  }
+
+  .top-header {
+    position: sticky;
+    top: 0;
+    padding: max(10px, env(safe-area-inset-top, 0px)) max(14px, env(safe-area-inset-right, 0px)) 10px max(14px, env(safe-area-inset-left, 0px));
+    gap: 10px;
+  }
+
+  .brand-subtitle,
+  .stat-pill {
+    display: none;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .nav-tab {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding: 7px 4px;
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  /* Story Map: show map + scrubber FIRST above sidebar on mobile */
+  .geo-layout {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .geo-main {
+    order: -1;
+  }
+
+  .geo-sidebar {
+    border-right: none;
+    border-top: 1px solid var(--border-subtle);
+    overflow-y: visible;
+    padding: 14px;
+  }
+
+  .map-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .leaflet-canvas {
+    height: 52dvh;
+    min-height: 320px;
+  }
+
+  /* Dock place inspector cleanly below map instead of covering it */
+  .place-inspector {
+    position: static;
+    width: 100%;
+    max-height: none;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    background: var(--bg-surface);
+  }
+
+  /* Lineage Graph */
+  .graph-body {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-canvas-scroll {
+    max-height: 54dvh;
+    min-height: 320px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .graph-dossier {
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    overflow-y: visible;
+  }
+
+  /* Timeline */
+  .timeline-page {
+    padding: 14px 14px 32px;
+    overflow-y: visible;
+  }
+
+  .era-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .era-card {
+    flex: 0 0 240px;
+    scroll-snap-align: start;
+  }
+
+  .timeline-header-row {
+    display: none;
+  }
+
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  /* Chapter Reader: horizontal swipeable chapter strip above article */
   .reader-layout {
     grid-template-columns: 1fr;
   }
 
-  .timeline-header-row,
-  .timeline-row {
-    grid-template-columns: 1fr;
+  .reader-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 12px 14px;
+  }
+
+  .chapter-index-list {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 8px;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .chapter-index-item {
+    flex: 0 0 215px;
+    scroll-snap-align: start;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-canvas);
+  }
+
+  .reader-content {
+    padding: 18px 16px max(36px, env(safe-area-inset-bottom, 0px));
+    overflow-y: visible;
   }
 
   .reader-entities-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .reader-content {
-    padding: 20px;
+@media (max-width: 640px) {
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .top-header .secondary-btn span {
+    display: none;
+  }
+
+  .scrubber-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .scrubber-controls {
+    justify-content: center;
+  }
+
+  .scrubber-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .scrubber-ticks span:nth-child(2),
+  .scrubber-ticks span:nth-child(3),
+  .scrubber-ticks span:nth-child(4) {
+    display: none;
+  }
+
+  .graph-toolbar {
+    padding: 10px 14px;
+  }
+
+  .search-box {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .filter-select {
+    flex: 1 1 130px;
+  }
+
+  .zoom-controls {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .serif-hero {
+    font-size: 1.85rem;
   }
 }

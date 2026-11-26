@@ -135,7 +135,13 @@ export const GeoTimelineMap: React.FC<GeoTimelineMapProps> = ({
     journeyLayerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
+    const ro = new ResizeObserver(() => {
+      map.invalidateSize();
+    });
+    ro.observe(mapContainerRef.current);
+
     return () => {
+      ro.disconnect();
       map.remove();
       mapRef.current = null;
     };
@@ -473,25 +479,28 @@ export const GeoTimelineMap: React.FC<GeoTimelineMapProps> = ({
           <div className="scrubber-controls">
             <button
               className="icon-btn"
+              aria-label="Previous chapter"
               onClick={() =>
                 onSelectChapter(selectedChapter > 1 ? selectedChapter - 1 : 37)
               }
             >
-              <SkipBack size={16} />
+              <SkipBack size={16} aria-hidden="true" />
             </button>
             <button
               className="icon-btn play-btn"
+              aria-label={isPlaying ? 'Pause chronicle tour' : 'Play chronicle tour'}
               onClick={() => setIsPlaying((p) => !p)}
             >
-              {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+              {isPlaying ? <Pause size={16} aria-hidden="true" /> : <Play size={16} aria-hidden="true" />}
             </button>
             <button
               className="icon-btn"
+              aria-label="Next chapter"
               onClick={() =>
                 onSelectChapter(selectedChapter < 37 ? selectedChapter + 1 : 1)
               }
             >
-              <SkipForward size={16} />
+              <SkipForward size={16} aria-hidden="true" />
             </button>
           </div>
           <div className="scrubber-track">

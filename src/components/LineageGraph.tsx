@@ -216,19 +216,22 @@ export const LineageGraph: React.FC<LineageGraphProps> = ({
         <div className="zoom-controls">
           <button
             className="icon-btn"
+            aria-label="Zoom out"
             onClick={() => setZoom((z) => Math.max(0.55, +(z - 0.12).toFixed(2)))}
           >
-            <ZoomOut size={15} />
+            <ZoomOut size={15} aria-hidden="true" />
           </button>
           <span className="zoom-label">{Math.round(zoom * 100)}%</span>
           <button
             className="icon-btn"
+            aria-label="Zoom in"
             onClick={() => setZoom((z) => Math.min(1.4, +(z + 0.12).toFixed(2)))}
           >
-            <ZoomIn size={15} />
+            <ZoomIn size={15} aria-hidden="true" />
           </button>
           <button
             className="icon-btn"
+            aria-label="Reset zoom and filters"
             onClick={() => {
               setZoom(0.92);
               setEraFilter('all');
@@ -236,13 +239,18 @@ export const LineageGraph: React.FC<LineageGraphProps> = ({
               setSearch('');
             }}
           >
-            <RotateCcw size={15} />
+            <RotateCcw size={15} aria-hidden="true" />
           </button>
         </div>
       </div>
 
       <div className="graph-body">
-        <div className="graph-canvas-scroll">
+        <div
+          className="graph-canvas-scroll"
+          tabIndex={0}
+          role="region"
+          aria-label={ui.tabs.graph}
+        >
           <svg
             width={svgWidth * zoom}
             height={svgHeight * zoom}
